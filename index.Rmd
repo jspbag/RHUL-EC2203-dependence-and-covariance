@@ -1,0 +1,109 @@
+---
+pagetitle: Dependence and covariance
+output: 
+  revealjs::revealjs_presentation:
+    incremental: false
+    theme: solarized
+    self_contained: false
+    # reveal_plugins: ["menu","notes","chalkboard"]
+    reveal_plugins: ["menu"]
+    highlight: pygments
+    center: true
+    transition: none
+    background_transition: none 
+    reveal_options:
+      # chalkboard:
+      #   theme: whiteboard
+      #   toggleNotesButton: true
+      #   toggleChalkboardButton: true
+      menu:
+        numbers: true
+      slideNumber: true
+      previewLinks: false
+    fig_caption: true
+    css: mystyle.css
+    
+--- 
+
+<section>
+
+<h1>Dependence and covariance</h1>
+
+Based on Stock and Watson, ch. 2
+
+<br>
+
+<h2>[Jesper Bagger](mailto:jesper.bagger@rhul.ac.uk)</h2>
+
+<h3>EC2203 | Royal Holloway | 2020/21</h3>
+
+</section>
+
+# Dependence and covariance
+
+## Independence
+
+- Two random variables $X$ and $Y$ are **independent** if knowing the value of one provides no information about the value of the other
+
+- Formally, $X$ and $Y$ are independent when
+
+  <div class="box">
+  $$f_{Y|X}(y|x) = f_Y(y),$$
+  </div>
+
+  <!-- a condition which may also be stated as  -->
+
+  <!-- $$f_{XY}(x,y) = f_X(x) f_Y(y)$$ -->
+
+## Mean independence
+
+- $Y$ is **mean independent** of $X$ if the conditional mean of $Y$ equal its unconditional mean; that is, if
+
+  <div class="box">
+  $$\mu_{Y|X} = \mu_Y$$
+  </div>
+
+- Mean independence is **weaker** than independence;
+
+  that is, independence implies mean independence, but mean independence does not imply independence
+
+<!-- - Mean independence is weaker than indepenence: independence implies mean independence, but mean independence does not imply independence -->
+
+## Covariance
+
+- The **covariance** is a common measure of the extent to which $X$ and $Y$ move together 
+
+  <div class="box">
+  $$\mathrm{cov}(X,Y) = \mathrm{E}[(X - \mu_X)(Y - \mu_Y)]$$
+  </div>
+  
+- We sometimes refer to $\mathrm{cov}(X,Y)$ as $\sigma_{XY}$
+
+- Zero covariance is weaker than mean independence;
+
+  that is, mean independence implies zero covariance, but zero covariance does not imply mean independence
+
+## Correlation
+
+- The **correlation** is a closely related and **unit-free** measure of the extent to which $X$ and $Y$ move together 
+
+  <div class="box">
+  $$\mathrm{corr}(X,Y) = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}$$
+  </div>
+
+- We sometimes refer to $\mathrm{corr}(X,Y)$ as $\rho_{XY}$
+
+
+# Summary
+
+## Summary
+
+- $X$ and $Y$ are independent if the conditional distributions coincide with the marginal distributions
+
+- $Y$ is mean independent of $X$ if the conditional mean of $Y$ equal its unconditional mean
+
+- The covariance between $X$ and $Y$ is is a measure of how closely $X$ and $Y$ move together 
+
+- Independence $\Rightarrow$ Mean independence $\Rightarrow$ zero covariance
+
+  Independence $\not \Leftarrow$ Mean independence $\not \Leftarrow$ zero covariance
