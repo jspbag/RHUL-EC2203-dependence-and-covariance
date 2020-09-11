@@ -57,10 +57,10 @@ Based on Stock and Watson, ch. 2
 
 ## Mean independence
 
-- $Y$ is **mean independent** of $X$ if the conditional mean of $Y$ equal its unconditional mean; that is, if
+- $Y$ is **mean independent** of $X$ if the conditional mean of $Y$ is equal to its unconditional mean; that is, if
 
   <div class="box">
-  $$\mu_{Y|X} = \mu_Y$$
+  $$\mathrm{E}(Y|X) = \mathrm{E}(Y)$$
   </div>
 
 - Mean independence is **weaker** than independence;
